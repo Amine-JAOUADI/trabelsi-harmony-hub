@@ -71,7 +71,7 @@ const Calendrier = () => {
           <p className="text-primary text-sm tracking-[0.2em] uppercase mb-3">Planning</p>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Disponibilités</h1>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Consultez notre calendrier et réservez la date idéale pour votre événement.
+            Consultez abcdef notre calendrier et réservez la date idéale pour votre événement.
           </p>
         </motion.div>
 
