@@ -1,0 +1,145 @@
+troupe-trabelsi
++-- public
+¦   +-- images
+¦   ¦   +-- chanteurs
+¦   ¦   ¦   +-- chanteur1.png
+¦   ¦   ¦   +-- chanteur2.png
+¦   ¦   ¦   +-- chanteur3.png
+¦   ¦   +-- icon
+¦   ¦   ¦   +-- troupeIcon.jpg
+¦   ¦   +-- spectacles
+¦   ¦   ¦   +-- hadra.jpg
+¦   ¦   ¦   +-- nouba.jpg
+¦   ¦   ¦   +-- ziyara.jpg
+¦   ¦   +-- style-musicaux
+¦   ¦   ¦   +-- dabka.jpg
+¦   ¦   ¦   +-- malouf_tunisien.jpg
+¦   ¦   ¦   +-- mezwed.jpg
+¦   ¦   ¦   +-- orientale.jpg
+¦   ¦   ¦   +-- pop_arabe.jpg
+¦   ¦   ¦   +-- pop_occidentale.jpg
+¦   ¦   +-- styles-musicaux
+¦   ¦   ¦   +-- dabka.jpg
+¦   ¦   ¦   +-- malouf_tunisien.jpg
+¦   ¦   ¦   +-- mezwed.jpg
+¦   ¦   ¦   +-- orientale.jpg
+¦   ¦   ¦   +-- pop_arabe.jpg
+¦   ¦   ¦   +-- pop_occidentale.jpg
+¦   ¦   +-- musiciens.jpg
+¦   +-- favicon.ico
+¦   +-- main_image.png
+¦   +-- placeholder.svg
+¦   +-- robots.txt
++-- src
+¦   +-- assets
+¦   ¦   +-- hero-bg old.jpg
+¦   ¦   +-- hero-bg.jpg
+¦   +-- components
+¦   ¦   +-- ui
+¦   ¦   ¦   +-- accordion.tsx
+¦   ¦   ¦   +-- alert.tsx
+¦   ¦   ¦   +-- alert-dialog.tsx
+¦   ¦   ¦   +-- aspect-ratio.tsx
+¦   ¦   ¦   +-- avatar.tsx
+¦   ¦   ¦   +-- badge.tsx
+¦   ¦   ¦   +-- breadcrumb.tsx
+¦   ¦   ¦   +-- button.tsx
+¦   ¦   ¦   +-- calendar.tsx
+¦   ¦   ¦   +-- card.tsx
+¦   ¦   ¦   +-- carousel.tsx
+¦   ¦   ¦   +-- chart.tsx
+¦   ¦   ¦   +-- checkbox.tsx
+¦   ¦   ¦   +-- collapsible.tsx
+¦   ¦   ¦   +-- command.tsx
+¦   ¦   ¦   +-- context-menu.tsx
+¦   ¦   ¦   +-- dialog.tsx
+¦   ¦   ¦   +-- drawer.tsx
+¦   ¦   ¦   +-- dropdown-menu.tsx
+¦   ¦   ¦   +-- form.tsx
+¦   ¦   ¦   +-- hover-card.tsx
+¦   ¦   ¦   +-- input.tsx
+¦   ¦   ¦   +-- input-otp.tsx
+¦   ¦   ¦   +-- label.tsx
+¦   ¦   ¦   +-- menubar.tsx
+¦   ¦   ¦   +-- navigation-menu.tsx
+¦   ¦   ¦   +-- pagination.tsx
+¦   ¦   ¦   +-- popover.tsx
+¦   ¦   ¦   +-- progress.tsx
+¦   ¦   ¦   +-- radio-group.tsx
+¦   ¦   ¦   +-- resizable.tsx
+¦   ¦   ¦   +-- scroll-area.tsx
+¦   ¦   ¦   +-- select.tsx
+¦   ¦   ¦   +-- separator.tsx
+¦   ¦   ¦   +-- sheet.tsx
+¦   ¦   ¦   +-- sidebar.tsx
+¦   ¦   ¦   +-- skeleton.tsx
+¦   ¦   ¦   +-- slider.tsx
+¦   ¦   ¦   +-- sonner.tsx
+¦   ¦   ¦   +-- switch.tsx
+¦   ¦   ¦   +-- table.tsx
+¦   ¦   ¦   +-- tabs.tsx
+¦   ¦   ¦   +-- textarea.tsx
+¦   ¦   ¦   +-- toast.tsx
+¦   ¦   ¦   +-- toaster.tsx
+¦   ¦   ¦   +-- toggle.tsx
+¦   ¦   ¦   +-- toggle-group.tsx
+¦   ¦   ¦   +-- tooltip.tsx
+¦   ¦   ¦   +-- use-toast.ts
+¦   ¦   +-- Footer.tsx
+¦   ¦   +-- HeroSection.tsx
+¦   ¦   +-- Navbar.tsx
+¦   ¦   +-- NavLink.tsx
+¦   ¦   +-- PackageCard.tsx
+¦   ¦   +-- ProtectedRoute.tsx
+¦   ¦   +-- ScrollToTop.tsx
+¦   +-- contexts
+¦   ¦   +-- AdminContext.tsx
+¦   ¦   +-- AdminDataContext.tsx
+¦   +-- data
+¦   ¦   +-- packages.ts
+¦   +-- hooks
+¦   ¦   +-- use-mobile.tsx
+¦   ¦   +-- use-toast.ts
+¦   +-- lib
+¦   ¦   +-- utils.ts
+¦   +-- pages
+¦   ¦   +-- admin
+¦   ¦   ¦   +-- AdminArtists.tsx
+¦   ¦   ¦   +-- AdminCalendar.tsx
+¦   ¦   ¦   +-- AdminDemands.tsx
+¦   ¦   ¦   +-- AdminOverview.tsx
+¦   ¦   ¦   +-- AdminPackages.tsx
+¦   ¦   +-- AdminDashboard.tsx
+¦   ¦   +-- AdminLogin.tsx
+¦   ¦   +-- Calendrier.tsx
+¦   ¦   +-- Index.tsx
+¦   ¦   +-- NosTroupe.tsx
+¦   ¦   +-- NotFound.tsx
+¦   ¦   +-- PackageDetail.tsx
+¦   ¦   +-- Packages.tsx
+¦   ¦   +-- Reserver.tsx
+¦   +-- test
+¦   ¦   +-- example.test.ts
+¦   ¦   +-- setup.ts
+¦   +-- App.css
+¦   +-- App.tsx
+¦   +-- index.css
+¦   +-- main.tsx
+¦   +-- vite-env.d.ts
++-- .gitignore
++-- bun.lockb
++-- components.json
++-- eslint.config.js
++-- export-tree.ps1
++-- index.html
++-- package.json
++-- package-lock.json
++-- postcss.config.js
++-- README.md
++-- structure.txt
++-- tailwind.config.ts
++-- tsconfig.app.json
++-- tsconfig.json
++-- tsconfig.node.json
++-- vite.config.ts
++-- vitest.config.ts

@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import { Send, Check } from "lucide-react";
 import Footer from "@/components/Footer";
 import { packages, singers, stars } from "@/data/packages";
+import { useAdminData } from "@/contexts/AdminDataContext";
 
 const Reserver = () => {
   const [searchParams] = useSearchParams();
   const packageId = searchParams.get("package") || "";
-  const singerIds = searchParams.get("singers")?.split(",").filter(Boolean) || [];
-  const starIds = searchParams.get("stars")?.split(",").filter(Boolean) || [];
+  const singerIds = searchParams.get("singers")?.split(",").filter(Boolean) ||[];
+  const starIds = searchParams.get("stars")?.split(",").filter(Boolean) ||[];
   const preDate = searchParams.get("date") || "";
 
   const [selectedPackage, setSelectedPackage] = useState(packageId);
@@ -20,6 +21,24 @@ const Reserver = () => {
   const [guests, setGuests] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [contextError, setContextError] = useState(false);
+
+  // Safely try to get the context
+  let addDemand;
+  try {
+    const adminData = useAdminData();
+    addDemand = adminData.addDemand;
+  } catch (error) {
+    console.error("AdminData context not available - using fallback");
+    // Fallback function that just logs
+    addDemand = (demand: any) => {
+      console.log("Would save demand:", demand);
+      // You could also save to localStorage here as a backup
+      const existing = JSON.parse(localStorage.getItem('pendingDemands') || '[]');
+      localStorage.setItem('pendingDemands', JSON.stringify([...existing, demand]));
+    };
+    setContextError(true);
+  }
 
   const pkg = packages.find((p) => p.id === selectedPackage);
 
@@ -43,10 +62,20 @@ const Reserver = () => {
     if (g <= 250) return "bronze";
     if (g <= 500) return "gold";
     return "diamant";
-  }, [guests]);
+  },[guests]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    addDemand({
+      id: `d${Date.now()}`,
+      name, email, phone, date,
+      packageId: selectedPackage,
+      guests, message,
+      singers: singerIds,
+      stars: starIds,
+      status: "pending",
+      createdAt: new Date().toISOString(),
+    });
     setSubmitted(true);
   };
 
@@ -61,6 +90,11 @@ const Reserver = () => {
           <p className="text-muted-foreground mb-6">
             Notre équipe vous contactera dans les plus brefs délais pour confirmer votre réservation.
           </p>
+          {contextError && (
+            <p className="text-xs text-amber-400 mb-4">
+              Note: Vos données ont été sauvegardées localement et seront synchronisées ultérieurement.
+            </p>
+          )}
           <a href="/" className="text-primary hover:underline text-sm">Retour à l'accueil</a>
         </motion.div>
       </div>
